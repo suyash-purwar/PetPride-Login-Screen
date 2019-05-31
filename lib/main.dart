@@ -43,9 +43,9 @@ class LoginPageState extends State<LoginPage>{
             ),
 
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(top: 100),
                   child: Text(
                     "Pet Pride",
                     textAlign: TextAlign.center,
@@ -59,6 +59,7 @@ class LoginPageState extends State<LoginPage>{
                     )
                   ),
                 ),
+
                 Container(
                   margin: EdgeInsets.only(top: 0),
                   child: Text(
@@ -75,10 +76,49 @@ class LoginPageState extends State<LoginPage>{
                     )
                   ),
                 ),
-              ],
-              
-            ),
 
+                Form(
+                  child: Theme(
+                    data: ThemeData(
+                      primaryColor: Colors.black,
+                      accentColor: Colors.black54,
+                      brightness: Brightness.light,
+                      inputDecorationTheme: InputDecorationTheme(
+                        labelStyle: TextStyle(color: Colors.black, fontSize: 17),
+                      )
+                    ),
+                    child: Container(
+                      margin: EdgeInsets.only(top: 50),
+                      padding: EdgeInsets.all(40.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          TextFormField(
+                            decoration: InputDecoration(
+                              labelText: "Email Address",
+                              border: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.black87,
+                                  width: 2.0
+                                ),
+                              )
+                            ),
+                            keyboardType: TextInputType.emailAddress,
+                          ),
+                          TextFormField(
+                            decoration: InputDecoration(
+                              labelText: "Password",
+                            ),
+                            keyboardType: TextInputType.text,
+                            obscureText: true,
+                          )
+                        ],
+                      )
+                    )
+                  ),
+                )
+              ],
+            ),
           ]
         ),
       )
