@@ -38,7 +38,7 @@ class LoginPageState extends State<LoginPage>{
               child: Container(
                 height: double.infinity,
                 width: double.infinity,
-                color: Colors.white.withOpacity(0.5)
+                color: Colors.white.withOpacity(0.7)
               )
             ),
 
@@ -111,12 +111,24 @@ class LoginPageState extends State<LoginPage>{
                             ),
                             keyboardType: TextInputType.text,
                             obscureText: true,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 20.0)
+                          ),
+                          RaisedButton(
+                            
+                            color: Colors.black.withOpacity(1),
+                            onPressed: () {},
+                            padding: EdgeInsets.all(10),
+                            elevation: 7.0,
+                            textColor: Colors.white,
+                            child: Text("Login")
                           )
                         ],
                       )
                     )
                   ),
-                )
+                ),
               ],
             ),
           ]
